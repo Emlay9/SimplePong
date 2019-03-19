@@ -72,6 +72,9 @@ public class GameScreen extends Screen
 
         //check if the ball is between the paddle on the x axis (first 2 conditions)
         // check if the ball is below the paddle
+        //the last condition checks that the ball is above the bottom of the battle (or else it would count it
+        // as a collision when the ball came at an angle and went underneath the paddle
+
         if (spriteX + ballDiameter > paddleX && spriteX < paddleX + paddleWidth
                 && spriteY + ballDiameter > paddleY
                 && spriteY + ballDiameter < paddleY + paddleHeight)
